@@ -1,0 +1,218 @@
+
+.top-head{
+    /* border: 2px solid red; */
+background-color: #415FFF;
+padding: 8px 0;
+
+}
+.top-head .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+}
+.leftSide{
+    /* border: 2px solid green; */
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+/* width: 40%; */
+
+
+}
+.logo{
+    font-family: 'Preahvihear', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+
+}
+.inputBox{
+    /* border: 1px solid #00816F; */
+    width: 500px;
+    display: flex;
+align-items: center;
+background-color: #fff;
+border-radius: 10px;
+border: none;
+
+}
+.inputBox input{
+    width: 100%;
+/* border: 2px solid red; */
+padding: 8px 0;
+padding-left: 15px;
+outline: none;
+border: none;
+border-radius: 10px;
+}
+.searchIcon{
+    font-size: 30px;
+margin-right: 15px;
+color: #EC5F15;
+}
+.rightSide{
+    /* border: 2px solid red; */
+    display: flex;
+    column-gap: 25px;
+    font-size: 28px;
+    color: #FFF000;
+    
+}
+.cart,.wishList{
+    position: relative;
+}
+.cartCount, .wishCount {
+    position: absolute;
+    /* border: 2px solid green; */
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 54px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -4px;
+    right: -5px;
+    color: #EC5F15;
+    /* text-align: center; */
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+
+}
+.middel-head{
+    background-color: #fff;
+}
+.middel-head .container{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.middel-head p{
+    /* border: 2px solid red; */
+    margin-bottom: 18px;
+
+    color: #00816F !important;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.bottom-head, .mobile-menu,.close-tgl,.cat-menuList {
+    display: none;
+
+}
+
+@media only screen and (max-width:991px){
+    .bottom-head, .mobile-menu{
+        display: block;
+
+    }
+    .middel-head{
+        display: none;
+
+    }
+    .leftSide .inputBox{
+        display: none;
+    }
+    .bottom-head{
+        padding: 8px 0;
+        background-color: #fff;
+    }
+    .bottom-head .inputBox{
+     border: 1px solid #00816F;
+        width: 100%;
+        border-radius: 5px;
+        /* margin: 8px 0; */
+    }
+    .bottom-head .inputBox input{
+        border-radius: 5px;
+
+    }
+    .menu-btn{
+        font-size: 36px;
+        color: #fff;
+    }
+    .mobileMenuDiv{
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(-100%);
+        overflow: hidden;
+        visibility: hidden;
+        background-color: #fff;
+        transition: all .3s;
+    }
+    .active .mobileMenuDiv {
+        transform: translateX(0%);
+        visibility: visible;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .close-menu{
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+    .close-tgl{
+        display: block;
+        font-size: 30px;
+
+    }
+    .cat-menuList{
+        display: block;
+        /* border: 2px solid red; */
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+    }
+    .cat-menuList li{
+        color: #00816F !important;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    }
+
+}
+@media only screen and (max-width:576px){
+    .rightSide{
+        column-gap: 9px;
+
+    }
+    .rightSide svg{
+        font-size: 25px;
+    }
+    .leftSide{
+        column-gap: 20px;
+    }
+    .logo {
+        font-size: 28px;
+        
+    }
+    .cartCount, .wishCount{
+        width: 17px;
+        height: 17px;
+        bottom: 0px;
+        right: -3px;
+    }
+}

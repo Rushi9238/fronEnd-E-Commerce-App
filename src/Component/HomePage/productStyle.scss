@@ -1,0 +1,412 @@
+.productList{
+    // border: 2px solid green;
+    padding-top: 50px;
+        padding-bottom: 50px;
+        background: linear-gradient(180deg, rgba(65, 95, 255, 0.30) 0%, rgba(0, 200, 255, 0.00) 100%);
+        overflow: hidden;
+
+        @media screen and (max-width:570px) {
+            padding-top: 30px;
+            padding-bottom: 60px;
+            position: relative;
+
+        }
+    .headBox {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 80px;
+        padding-right: 80px;
+    
+        @media screen and (max-width:770px) {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    
+        .head {
+            color: #000;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+    
+            @media screen and (max-width:570px) {
+                font-size: 20px;
+            }
+        }
+    
+        .viewall {
+            color: #000;
+            text-align: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 7px;
+    
+            @media screen and (max-width:570px) {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 16px;
+            }
+        }
+    }
+}
+.nd2ProductList{
+    background: linear-gradient(180deg, rgba(0, 200, 255, 0.00) 0%,  rgba(65, 95, 255, 0.30) 100%) !important;
+
+}
+.nd3ProductList{
+    background: linear-gradient(180deg, rgba(251, 163, 55, 0.4) 0%,  rgba(252, 94, 2, 0.00) 100%) !important;
+    // background: rgba(255, 185, 100,0.4) !important;
+
+}
+
+.carProducts {
+    margin-top: 30px;
+    position: relative;
+    padding: 0px 80px;
+// border: 2px solid red;
+    @media screen and (max-width:770px) {
+        padding: 0px 0px;
+    }
+
+
+
+
+    .nextProBtn {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(0%);
+
+        @media screen and (max-width:770px) {
+            display: none;
+        }
+
+        &.swiper-button-disabled {
+            background: rgba(255, 255, 255, 0.507);
+        }
+
+    }
+
+    .prevProBtn {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(0%);
+
+        @media screen and (max-width:770px) {
+            display: none;
+        }
+
+        &.swiper-button-disabled {
+            background: rgba(255, 255, 255, 0.507);
+        }
+    }
+}
+
+.productDiv {
+    background: white;
+    border-radius: 20px;
+    position: relative;
+    height: 100%;
+
+    @media screen and (max-width:570px) {
+        border-radius: 10px;
+    }
+
+
+
+    .imgBox {
+        padding: 0px 0px 10px 0px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        @media screen and (max-width:990px) {
+            padding: 0px 0px 10px 0px;
+        }
+
+        @media screen and (max-width:570px) {
+            padding: 0px 0px 10px 0px;
+            border-radius: 10px;
+        }
+
+        .proImg {
+            width: 100%;
+            scale: 1;
+            transition: all .4s;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        padding: 0px 25px 25px 25px;
+
+        @media screen and (max-width:990px) {
+            padding: 0px 20px 20px 20px;
+        }
+
+        @media screen and (max-width:570px) {
+            padding: 0px 10px 10px 10px;
+        }
+
+        .proName {
+            color: #000;
+            text-align: center;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+
+            @media screen and (max-width:990px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            @media screen and (max-width:570px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        .proDesc {
+            margin-top: 3px;
+            color: #505050;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+
+            @media screen and (max-width:990px) {
+                font-size: 13px;
+                line-height: 22px;
+            }
+        }
+
+        .redPrice {
+            margin-top: 15px;
+            color: #E61423;
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+
+            @media screen and (max-width:990px) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            @media screen and (max-width:570px) {
+                margin-top: 5px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .priceDis {
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 7px;
+
+            .price {
+                color: #505050;
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 28px;
+                text-decoration-line: line-through;
+
+                @media screen and (max-width:570px) {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+
+            .dis {
+                border-radius: 3px;
+                border: 1px solid #000;
+                padding: 4px;
+                text-align: center;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                color: black;
+
+                @media screen and (max-width:570px) {
+                    font-size: 10px;
+                    padding: 2px;
+                }
+
+
+            }
+
+        }
+    }
+
+    .offer {
+        position: absolute;
+        top: 10px;
+        right: 13px;
+        border-radius: 5px;
+        background: #EB008C;
+        padding: 5px;
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 16px;
+
+        &.in {
+            background: #7800FA;
+        }
+
+        @media screen and (max-width:570px) {
+            top: 8px;
+            right: 8px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 400;
+            padding: 3px;
+        }
+    }
+}
+
+
+// .midBanSec
+.midBanSec {
+    background: rgba(0, 200, 255, 0.00);
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    @media screen and (max-width:570px) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .carSliderInner {
+        padding: 0px 80px;
+
+        @media screen and (max-width:770px) {
+            padding: 0px 0px;
+
+        }
+    }
+
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 40px;
+            height: 1px;
+            background: white;
+            height: 2px;
+            border-radius: 0px;
+            opacity: .5;
+            transition: all .2s;
+
+            &.swiper-pagination-bullet-active {
+                background: white;
+                height: 4px;
+                opacity: 1;
+                
+
+            }
+        }
+    }
+}
+
+// ourBenifits
+.ourBenifits {
+    padding-bottom: 90px;
+    background: #f5f5f5;
+    padding-top: 90px;
+
+    @media screen and (max-width:570px) {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .heading {
+        color: #000;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+
+        @media screen and (max-width:570px) {
+            font-size: 20px;
+        }
+    }
+
+    .elems {
+        margin-top: 46px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        column-gap: 50px;
+
+        @media screen and (max-width:770px) {
+            flex-wrap: wrap;
+            row-gap: 20px;
+
+        }
+
+        @media screen and (max-width:570px) {
+            margin-top: 25px;
+            column-gap: 20px;
+        }
+
+        .elem {
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            row-gap: 17px;
+
+            .text {
+                color: #505050;
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+
+                @media screen and (max-width:570px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

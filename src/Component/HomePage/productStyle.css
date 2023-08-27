@@ -1,0 +1,399 @@
+.productList {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: linear-gradient(180deg, rgba(65, 95, 255, 0.3) 0%, rgba(0, 200, 255, 0) 100%);
+  overflow: hidden;
+}
+@media screen and (max-width: 570px) {
+  .productList {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+}
+.productList .headBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+@media screen and (max-width: 770px) {
+  .productList .headBox {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.productList .headBox .head {
+  color: #000;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+@media screen and (max-width: 570px) {
+  .productList .headBox .head {
+    font-size: 20px;
+  }
+}
+.productList .headBox .viewall {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+}
+@media screen and (max-width: 570px) {
+  .productList .headBox .viewall {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+  }
+}
+
+.nd2ProductList {
+  background: linear-gradient(180deg, rgba(0, 200, 255, 0) 0%, rgba(65, 95, 255, 0.3) 100%) !important;
+}
+
+.nd3ProductList {
+  background: linear-gradient(180deg, rgba(251, 163, 55, 0.4) 0%, rgba(252, 94, 2, 0) 100%) !important;
+}
+
+.carProducts {
+  margin-top: 30px;
+  position: relative;
+  padding: 0px 80px;
+}
+@media screen and (max-width: 770px) {
+  .carProducts {
+    padding: 0px 0px;
+  }
+}
+.carProducts .nextProBtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(0%);
+}
+@media screen and (max-width: 770px) {
+  .carProducts .nextProBtn {
+    display: none;
+  }
+}
+.carProducts .nextProBtn.swiper-button-disabled {
+  background: rgba(255, 255, 255, 0.507);
+}
+.carProducts .prevProBtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(0%);
+}
+@media screen and (max-width: 770px) {
+  .carProducts .prevProBtn {
+    display: none;
+  }
+}
+.carProducts .prevProBtn.swiper-button-disabled {
+  background: rgba(255, 255, 255, 0.507);
+}
+
+.productDiv {
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  height: 100%;
+}
+@media screen and (max-width: 570px) {
+  .productDiv {
+    border-radius: 10px;
+  }
+}
+.productDiv .imgBox {
+  padding: 0px 0px 10px 0px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media screen and (max-width: 990px) {
+  .productDiv .imgBox {
+    padding: 0px 0px 10px 0px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .productDiv .imgBox {
+    padding: 0px 0px 10px 0px;
+    border-radius: 10px;
+  }
+}
+.productDiv .imgBox .proImg {
+  width: 100%;
+  scale: 1;
+  transition: all 0.4s;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.productDiv .content {
+  padding: 0px 25px 25px 25px;
+}
+@media screen and (max-width: 990px) {
+  .productDiv .content {
+    padding: 0px 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .productDiv .content {
+    padding: 0px 10px 10px 10px;
+  }
+}
+.productDiv .content .proName {
+  color: #000;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+@media screen and (max-width: 990px) {
+  .productDiv .content .proName {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .productDiv .content .proName {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.productDiv .content .proDesc {
+  margin-top: 3px;
+  color: #505050;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+@media screen and (max-width: 990px) {
+  .productDiv .content .proDesc {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
+.productDiv .content .redPrice {
+  margin-top: 15px;
+  color: #E61423;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+@media screen and (max-width: 990px) {
+  .productDiv .content .redPrice {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .productDiv .content .redPrice {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.productDiv .content .priceDis {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+}
+.productDiv .content .priceDis .price {
+  color: #505050;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  text-decoration-line: line-through;
+}
+@media screen and (max-width: 570px) {
+  .productDiv .content .priceDis .price {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.productDiv .content .priceDis .dis {
+  border-radius: 3px;
+  border: 1px solid #000;
+  padding: 4px;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: black;
+}
+@media screen and (max-width: 570px) {
+  .productDiv .content .priceDis .dis {
+    font-size: 10px;
+    padding: 2px;
+  }
+}
+.productDiv .offer {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  border-radius: 5px;
+  background: #EB008C;
+  padding: 5px;
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 16px;
+}
+.productDiv .offer.in {
+  background: #7800FA;
+}
+@media screen and (max-width: 570px) {
+  .productDiv .offer {
+    top: 8px;
+    right: 8px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 3px;
+  }
+}
+
+.midBanSec {
+  background: rgba(0, 200, 255, 0);
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+@media screen and (max-width: 570px) {
+  .midBanSec {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+.midBanSec .carSliderInner {
+  padding: 0px 80px;
+}
+@media screen and (max-width: 770px) {
+  .midBanSec .carSliderInner {
+    padding: 0px 0px;
+  }
+}
+.midBanSec .swiper-pagination .swiper-pagination-bullet {
+  width: 40px;
+  height: 1px;
+  background: white;
+  height: 2px;
+  border-radius: 0px;
+  opacity: 0.5;
+  transition: all 0.2s;
+}
+.midBanSec .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: white;
+  height: 4px;
+  opacity: 1;
+}
+
+.ourBenifits {
+  padding-bottom: 90px;
+  background: #f5f5f5;
+  padding-top: 90px;
+}
+@media screen and (max-width: 570px) {
+  .ourBenifits {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+}
+.ourBenifits .heading {
+  color: #000;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+@media screen and (max-width: 570px) {
+  .ourBenifits .heading {
+    font-size: 20px;
+  }
+}
+.ourBenifits .elems {
+  margin-top: 46px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+@media screen and (max-width: 770px) {
+  .ourBenifits .elems {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .ourBenifits .elems {
+    margin-top: 25px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+.ourBenifits .elems .elem {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 17px;
+}
+.ourBenifits .elems .elem .text {
+  color: #505050;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+@media screen and (max-width: 570px) {
+  .ourBenifits .elems .elem .text {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=productStyle.css.map */
