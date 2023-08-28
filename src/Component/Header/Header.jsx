@@ -5,8 +5,10 @@ import { AiOutlineUser, AiOutlineHeart } from 'react-icons/ai'
 import {RxCross2} from 'react-icons/rx'
 
 import { CgMenu } from 'react-icons/cg'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+    const navigate=useNavigate()
     const [menuOpen, setmenuOpen] = useState(false)
     // console.log(menuOpen);
     return (
@@ -47,21 +49,21 @@ const Header = () => {
                     </div>
                     <div className="middel-head">
                         <div className="container">
-                        <div className="allProduct">
+                        <div className="allProduct" onClick={()=>navigate('/allProduct')}>
                                 <img src="" alt="" />
                                 <p>Our-Store</p>
 
                             </div>
-                            <div className="mobile">
+                            <div className="mobile" onClick={()=>navigate('/electPro')}>
                                 <img src="" alt="" />
                                 <p>Electronics</p>
 
                             </div>
-                            <div className="men-fashion">
+                            <div className="men-fashion" onClick={()=>navigate('/mensfashion')}>
                                 <img src="" alt="" />
                                 <p>Men's Fashion</p>
                             </div>
-                            <div className="women-fashion">
+                            <div className="women-fashion" onClick={()=>navigate('/womenfashion')}>
                                 <img src="" alt="" />
                                 <p>Women's Fashion</p>
                             </div>

@@ -4,6 +4,13 @@ import Header from './Component/Header/Header';
 import Homecaro from './Component/HomePage/Homecaro';
 import { useDispatch } from 'react-redux';
 import { collectData, electronicsProducts, mensProduct,womensProduct } from './Redux/ReducerSlice';
+import Home from './Component/HomePage/Home';
+import { Route, Routes } from 'react-router-dom';
+import ElectronicsProduct from './Component/ProductList/ElectronicsProduct';
+import MensFashion from './Component/ProductList/MensFashion';
+import WomensFashion from './Component/ProductList/WomensFashion';
+import OurStoteProduct from './Component/ProductList/OurStoteProduct';
+import ProductDetails from './Component/ProductDetails/ProductDetails';
 
 
 function App() {
@@ -45,7 +52,17 @@ dispatch(collectData(respo.products))
               https://dummyjson.com/products/category/smartphones
           */}
          <Header/>
-         <Homecaro/>
+        
+         {/* <Home/> */}
+         <Routes>
+          <Route path='/' element={<Homecaro/>}/>
+          <Route path='/allProduct' element={<OurStoteProduct/>}/>
+          <Route path='/electPro' element={<ElectronicsProduct/>}/>
+          <Route path='/mensfashion' element={<MensFashion/>}/>
+          <Route path='/womenfashion' element={<WomensFashion/>}/>
+          <Route path='/detils/:id' element={<ProductDetails/>}/>
+         </Routes>
+
     </div>
   );
 }

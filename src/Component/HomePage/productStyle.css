@@ -48,6 +48,7 @@
   justify-content: center;
   -moz-column-gap: 7px;
        column-gap: 7px;
+  cursor: pointer;
 }
 @media screen and (max-width: 570px) {
   .productList .headBox .viewall {

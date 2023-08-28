@@ -19,11 +19,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import './homepage.css'
 import './productStyle.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const Homecaro = () => {
-
+const navigate=useNavigate()
   const {electronics}=useSelector((select)=> select.ReducerSlice)
   const {mens}=useSelector((select)=> select.ReducerSlice)
   const {womens}=useSelector((select)=> select.ReducerSlice)
@@ -77,7 +77,7 @@ const Homecaro = () => {
        <div className="head">
        Top Electronics Product
        </div>
-       <div className="viewall">
+       <div className="viewall" onClick={()=>navigate('/electPro')}>
         View All
        </div>
       </div>
@@ -197,14 +197,14 @@ const Homecaro = () => {
                     </Swiper>
                 </div>
             </div>
-        </div>
+    </div>
     <div className="productList nd2ProductList">
      <div className="container">
      <div className="headBox">
        <div className="head">
        Top Mens Fashion
        </div>
-       <div className="viewall">
+       <div className="viewall" onClick={()=>navigate('/mensfashion')}>
         View All
        </div>
       </div>
@@ -288,7 +288,7 @@ const Homecaro = () => {
        <div className="head">
        Top Womens Fashion
        </div>
-       <div className="viewall">
+       <div className="viewall" onClick={()=>navigate('/womenfashion')}>
         View All
        </div>
       </div>
