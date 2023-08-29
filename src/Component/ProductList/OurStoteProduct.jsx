@@ -39,7 +39,7 @@ const navigate=useNavigate()
                   {
                     ProductData && ProductData.map((item)=>{
                       return (
-                        <div className="col-4" key={item.id} onClick={()=>navigate(``)}>
+                        <div className="col-4" key={item.id} onClick={()=>navigate(`/detils/${item.id}`)}>
                         <div className="product-card">
                           <div className="imgDiv">
                             <img className='img-fluid' src={item.thumbnail} alt="" />

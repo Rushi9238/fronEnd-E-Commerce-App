@@ -1,5 +1,5 @@
 .productDetilas-div {
-    border: 2px solid red;
+    // border: 2px solid red;
     background: #F5F5F5;
 
     .productDetilas-heading {
@@ -37,7 +37,9 @@
             overflow: hidden;
 
             .imgBox {
-
+                // position: sticky;
+                // top: 0px;
+                // z-index: 999;
                 // border: 2px solid green;
                 .row {
                     padding-right: 0 !important;
@@ -284,7 +286,10 @@
                         // border: 2px solid green;
                         display: flex;
                         column-gap: 20px;
-
+                        p{
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
                         .storageBox {
                             padding: 17px 25px;
                             border: 1px solid #E1E1E1;
@@ -337,3 +342,23 @@
         }
     }
 }
+
+figure.zoom {
+    background-position: 50% 50%;
+    position: relative;
+    border: 1px solid black;
+  
+    height: auto;
+    width: 400px;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  figure.zoom img:hover {
+    opacity: 0;
+  }
+  figure.zoom img {
+    transition: opacity 1s;
+    display: block;
+    width: 100%;
+    background:white;
+  }

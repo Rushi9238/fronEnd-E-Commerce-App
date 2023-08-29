@@ -32,14 +32,14 @@ const navigate=useNavigate()
         </div>
         <div className="container">
         <div className="row">
-          <div className="col-2"></div>
-          <div className="col-10">
+          <div className="col-lg-2"></div>
+          <div className="col-lg-10">
             <div className="productDiv">
                 <div className="row">
                   {
                     electronics && electronics.map((item)=>{
                       return (
-                        <div className="col-4" key={item.id} onClick={()=>navigate(`/detils/${item.id}`)}>
+                        <div className="col-lg-4 col-md-6" key={item.id} onClick={()=>navigate(`/detils/${item.id}`)}>
                         <div className="product-card">
                           <div className="imgDiv">
                             <img className='img-fluid' src={item.thumbnail} alt="" />

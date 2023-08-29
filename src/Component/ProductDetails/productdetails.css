@@ -1,5 +1,4 @@
 .productDetilas-div {
-  border: 2px solid red;
   background: #F5F5F5;
 }
 .productDetilas-div .productDetilas-heading {
@@ -228,6 +227,10 @@
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
+.productDetilas-div .productDetails .productsDeatils-Wrapper .details-text-containe .mobile-ram .storage p {
+  font-size: 18px;
+  font-weight: 500;
+}
 .productDetilas-div .productDetails .productsDeatils-Wrapper .details-text-containe .mobile-ram .storage .storageBox {
   padding: 17px 25px;
   border: 1px solid #E1E1E1;
@@ -268,4 +271,25 @@
 .productDetilas-div .productDetails .productsDeatils-Wrapper .details-text-containe .qut-counter .counter .incr {
   padding: 10px 20px;
   border: 1px solid;
+}
+
+figure.zoom {
+  background-position: 50% 50%;
+  position: relative;
+  border: 1px solid black;
+  height: auto;
+  width: 400px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+figure.zoom img:hover {
+  opacity: 0;
+}
+
+figure.zoom img {
+  transition: opacity 1s;
+  display: block;
+  width: 100%;
+  background: white;
 }/*# sourceMappingURL=productdetails.css.map */

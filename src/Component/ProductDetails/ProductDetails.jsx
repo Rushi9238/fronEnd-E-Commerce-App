@@ -5,60 +5,60 @@ import { BiSolidChevronRight } from 'react-icons/bi'
 // import ReactSlick from 'react-slick';
 import './productdetails.css'
 const ProductDetails = () => {
-  const { id } = useParams()
-  // const [varient, setVarient] = useState([])
-  const [details, setDetails] = useState({})
-  const [productName, setProductName] = useState('')
-  const [big_img, setBig_img] = useState('')
-  const [currentImgindex, setCurrurentImgIndex] = useState(0)
-  const [currentVarIndex, setCurrentVarIndex] = useState(0)
- 
+    const { id } = useParams()
+    // const [varient, setVarient] = useState([])
+    const [details, setDetails] = useState({})
+    const [productName, setProductName] = useState('')
+    const [big_img, setBig_img] = useState('')
+    const [currentImgindex, setCurrurentImgIndex] = useState(0)
+    const [currentVarIndex, setCurrentVarIndex] = useState(0)
 
-  useEffect(() => {
-      fetchDetilsApi()
-  }, [])
-  const fetchDetilsApi = async () => {
-      try {
-          const api = await fetch(`https://dummyjson.com/products/${id}`, {
-              method: 'GET',
-              headers: {
-                  'Content-Type': 'application/json',
-              }
-          })
-          const respo = await api.json()
-          console.log(respo);
-          setProductName(respo.title)
-          // setVarient(respo.data.variants)
-          setDetails(respo)
-          setBig_img(respo.images[0])
-      }
-      catch (error) {
-          console.log('error');
-      }
 
-  }
-  // console.log(varient);
-  //    console.log(details);
-  //    console.log(big_img);
-  //    console.log( details.images && details.images[0].path);
+    useEffect(() => {
+        fetchDetilsApi()
+    }, [])
+    const fetchDetilsApi = async () => {
+        try {
+            const api = await fetch(`https://dummyjson.com/products/${id}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+            const respo = await api.json()
+            console.log(respo);
+            setProductName(respo.title)
+            // setVarient(respo.data.variants)
+            setDetails(respo)
+            setBig_img(respo.images[0])
+        }
+        catch (error) {
+            console.log('error');
+        }
 
-  function zoom(e) {
-      var zoomer = e.currentTarget;
-      console.log(e);
-//   e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-//   e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-let  x = e.nativeEvent.offsetX/zoomer.offsetWidth*100
-let  y = e.nativeEvent.offsetY/zoomer.offsetHeight*100
-zoomer.style.backgroundPosition = x + '% ' + y + '%';
-  return (
-   <>
-    <div className="productDetilas-div">
+    }
+    // console.log(varient);
+    //    console.log(details);
+    //    console.log(big_img);
+    //    console.log( details.images && details.images[0].path);
+
+    function zoom(e) {
+      
+        var zoomer = e.currentTarget;
+        let x = e.nativeEvent.offsetX / zoomer.offsetWidth * 100
+        let y = e.nativeEvent.offsetY / zoomer.offsetHeight * 100
+        zoomer.style.backgroundPosition = x + '% ' + y + '%';
+    }
+    return (
+        <>
+            <div className="productDetilas-div">
                 <div className="productDetilas-heading">
                     <div className="container">
                         <div className="page-path">
                             <p>Home <span><BiSolidChevronRight /></span></p>
-                            <span>Mobile & Tablets <BiSolidChevronRight /></span>
-                            <div className="pro-path_span">vivo T2x 5G (Aurora Gold, 128 GB) (8 GB RAM)</div>
+                            <span>Detils <BiSolidChevronRight /></span>
+                            <span>{details && details.category} <BiSolidChevronRight /></span>
+                            <div className="pro-path_span"> {details && details.title} ({details && details.brand})</div>
                         </div>
                     </div>
                 </div>
@@ -66,15 +66,15 @@ zoomer.style.backgroundPosition = x + '% ' + y + '%';
                     <div className="container">
                         <div className="productsDeatils-Wrapper">
                             <div className="row">
-                                <div className="col-5">
+                                <div className="col-lg-5 ">
                                     <div className="imgBox">
                                         <div className="row  gx-2 gy-4">
                                             <div className="col-2 ">
                                                 <div className="small-img">
                                                     {details.images && details.images.map((img, index) => {
                                                         return (
-                                                            <img key={index} src={img.path} alt="" className={currentImgindex == index ? 'active' : ''} onClick={() => {
-                                                                setBig_img(img.path)
+                                                            <img key={index} src={img} alt="" className={currentImgindex == index ? 'active' : ''} onClick={() => {
+                                                                setBig_img(img)
                                                                 setCurrurentImgIndex(index)
                                                             }} />
                                                         )
@@ -85,12 +85,12 @@ zoomer.style.backgroundPosition = x + '% ' + y + '%';
                                             </div>
                                             <div className="col-10">
                                                 <div className="big-img">
-                                                    
-                                                  
-                                                    <figure className="zoom"  onMouseMove={(event)=>zoom(event)} style={{backgroundImage: `url(${big_img})`}}>
+
+
+                                                    <figure className="zoom" onMouseMove={(event) => zoom(event)} style={{ backgroundImage: `url(${big_img})` }}>
                                                         <img src={big_img} />
                                                     </figure>
-                                              
+
                                                 </div>
                                                 <div className="cart-buy-btn">
                                                     <button className='addtocart'>ADD TO CART</button>
@@ -101,15 +101,15 @@ zoomer.style.backgroundPosition = x + '% ' + y + '%';
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-7">
+                                <div className="col-lg-7">
                                     <div className="details-text-containe">
                                         <div className="heading">
-                                            {productName}
-                                            {/* <span>{details && details.options} {details && details.color}</span> */}
+                                            {productName} ({details && details.brand})
+
                                         </div>
                                         <div className="price-details">
-                                            <div className="dis-mrp"> ₹{((details && details.price*82)-( details && details.price*82*details.discountPercentage/100).toFixed(0))}.00</div>
-                                            <div className="actual-mrp">₹{details.price*82}.00
+                                            <div className="dis-mrp"> ₹{((details && details.price * 82) - (details && details.price * 82 * details.discountPercentage / 100).toFixed(0))}.00</div>
+                                            <div className="actual-mrp">₹{details.price * 82}.00
                                             </div>
                                             <div className="discount">{details && details.discountPercentage}% off</div>
                                             <span>(incl.of all taxes)</span>
@@ -149,22 +149,24 @@ zoomer.style.backgroundPosition = x + '% ' + y + '%';
                                         </div>
                                         <div className="mobile_color">
                                             <div className="head">
-                                                Colour
+                                                Product
                                             </div>
                                             <div className="colorImgBox">
                                                 <div className="imgBox active">
-                                                    <img src={details.images && details.images[0].path} alt="" />
-                                                    <p>{details && details.color}</p>
+                                                    <img src={details && details.thumbnail} alt="" />
+                                                    <p>{details && details.title}</p>
                                                 </div>
-                                              
+
                                             </div>
                                         </div>
                                         <div className="mobile-ram">
                                             <div className="head">
-                                                Ram & Storage
+                                            Description
                                             </div>
                                             <div className="storage">
-                                               
+                                                    <p>
+                                                        {details && details.description}
+                                                    </p>
                                                 {/* {
                                                     varient && varient.map((item, index) => {
                                                         return (
@@ -194,8 +196,8 @@ zoomer.style.backgroundPosition = x + '% ' + y + '%';
                     </div>
                 </div>
             </div>
-   </>
-  )
+        </>
+    )
 }
-}
+
 export default ProductDetails
