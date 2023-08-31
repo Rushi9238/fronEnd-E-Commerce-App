@@ -105,6 +105,7 @@ color: #EC5F15;
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
+    cursor: pointer;
 }
 
 .bottom-head, .mobile-menu,.close-tgl,.cat-menuList {

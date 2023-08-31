@@ -4,6 +4,7 @@ import { BiSolidChevronRight } from 'react-icons/bi'
 // import ReactImageMagnify from 'react-image-magnify';
 // import ReactSlick from 'react-slick';
 import './productdetails.css'
+import CartCount from './CartCount'
 const ProductDetails = () => {
     const { id } = useParams()
     // const [varient, setVarient] = useState([])
@@ -12,7 +13,16 @@ const ProductDetails = () => {
     const [big_img, setBig_img] = useState('')
     const [currentImgindex, setCurrurentImgIndex] = useState(0)
     const [currentVarIndex, setCurrentVarIndex] = useState(0)
+    const [cartCount,setCartCount]=useState(1)
+    const [productStock,setProductStock]=useState(0)
 
+    useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant",
+          });
+      },[])
 
     useEffect(() => {
         fetchDetilsApi()
@@ -31,17 +41,14 @@ const ProductDetails = () => {
             // setVarient(respo.data.variants)
             setDetails(respo)
             setBig_img(respo.images[0])
+            setProductStock(respo.stock)
         }
         catch (error) {
             console.log('error');
         }
 
     }
-    // console.log(varient);
-    //    console.log(details);
-    //    console.log(big_img);
-    //    console.log( details.images && details.images[0].path);
-
+ 
     function zoom(e) {
       
         var zoomer = e.currentTarget;
@@ -49,6 +56,7 @@ const ProductDetails = () => {
         let y = e.nativeEvent.offsetY / zoomer.offsetHeight * 100
         zoomer.style.backgroundPosition = x + '% ' + y + '%';
     }
+    console.log(cartCount);
     return (
         <>
             <div className="productDetilas-div">
@@ -167,28 +175,14 @@ const ProductDetails = () => {
                                                     <p>
                                                         {details && details.description}
                                                     </p>
-                                                {/* {
-                                                    varient && varient.map((item, index) => {
-                                                        return (
-                                                            <div key={item.id} className={` storageBox ${currentVarIndex == index ? 'active' : ''}`} onClick={() => {
-                                                                setDetails(item)
-                                                                setCurrentVarIndex(index)
-                                                            }}>
-                                                                {item.options}
-                                                            </div>
-                                                        )
-                                                    })
-                                                } */}
+                                              
                                             </div>
                                         </div>
-                                        <div className="qut-counter">
-                                            <div className="head">Quantity</div>
-                                            <div className="counter">
-                                                <div className="decr">-</div>
-                                                <span>1</span>
-                                                <div className="incr">+</div>
-                                            </div>
-                                        </div>
+                                        <CartCount
+                                        setCartCount={setCartCount}
+                                        cartCount={cartCount}
+                                        productStock={productStock}
+                                        />
                                     </div>
                                 </div>
                             </div>

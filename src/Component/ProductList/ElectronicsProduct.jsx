@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {BiSolidChevronRight} from 'react-icons/bi'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -6,6 +6,13 @@ import './productList.css'
 const ElectronicsProduct = () => {
   const {electronics}=useSelector((select)=> select.ReducerSlice)
 const navigate=useNavigate()
+useEffect(()=>{
+  window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+},[])
   return (
     <>
     <div className="product-container">

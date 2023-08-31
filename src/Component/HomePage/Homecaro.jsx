@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import img1 from '../../Assets/Imgaes/Home Banner/mobile.webp'
 import img2 from '../../Assets/Imgaes/Home Banner/fashion.webp'
 import img3 from '../../Assets/Imgaes/Home Banner/Home-Decor.webp'
@@ -28,7 +28,13 @@ const navigate=useNavigate()
   const {mens}=useSelector((select)=> select.ReducerSlice)
   const {womens}=useSelector((select)=> select.ReducerSlice)
 
-
+  useEffect(()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+      });
+  },[])
 
   // console.log(mens);
   return (
@@ -117,9 +123,9 @@ const navigate=useNavigate()
                               }}
                         >
                           {
-                            electronics.length>0 && electronics.map((item)=>{
-                              return <SwiperSlide>
-                              <div className="productDiv">
+                            electronics.length>0 && electronics.map((item,index)=>{
+                              return <SwiperSlide key={index}>
+                              <div onClick={()=>navigate(`/detils/${item.id}`)} className="productDiv">
                                   <div className="imgBox">
                                       <img src={item.thumbnail} alt="product image" className="proImg" />
                                   </div>
@@ -243,9 +249,9 @@ const navigate=useNavigate()
                               }}
                         >
                           {
-                            mens.length>0 && mens.slice(0,7).map((item)=>{
-                              return <SwiperSlide>
-                              <div className="productDiv">
+                            mens.length>0 && mens.slice(0,7).map((item,index)=>{
+                              return <SwiperSlide key={index} >
+                              <div onClick={()=>navigate(`/detils/${item.id}`)} className="productDiv">
                                   <div className="imgBox">
                                       <img src={item.thumbnail} alt="product image" className="proImg" />
                                   </div>
@@ -329,9 +335,9 @@ const navigate=useNavigate()
                               }}
                         >
                           {
-                            womens.length>0 && womens.slice(0,8).map((item)=>{
-                              return <SwiperSlide>
-                              <div className="productDiv">
+                            womens.length>0 && womens.slice(0,8).map((item,index)=>{
+                              return <SwiperSlide key={index}>
+                              <div onClick={()=>navigate(`/detils/${item.id}`)} className="productDiv">
                                   <div className="imgBox">
                                       <img src={item.thumbnail} alt="product image" className="proImg" />
                                   </div>
