@@ -5,6 +5,7 @@ import { BiSolidChevronRight } from 'react-icons/bi'
 // import ReactSlick from 'react-slick';
 import './productdetails.css'
 import CartCount from './CartCount'
+import AddToCartButton from './AddToCartButton'
 const ProductDetails = () => {
     const { id } = useParams()
     // const [varient, setVarient] = useState([])
@@ -36,7 +37,7 @@ const ProductDetails = () => {
                 }
             })
             const respo = await api.json()
-            console.log(respo);
+            // console.log(respo);
             setProductName(respo.title)
             // setVarient(respo.data.variants)
             setDetails(respo)
@@ -56,7 +57,7 @@ const ProductDetails = () => {
         let y = e.nativeEvent.offsetY / zoomer.offsetHeight * 100
         zoomer.style.backgroundPosition = x + '% ' + y + '%';
     }
-    console.log(cartCount);
+    // console.log(cartCount);
     return (
         <>
             <div className="productDetilas-div">
@@ -101,7 +102,11 @@ const ProductDetails = () => {
 
                                                 </div>
                                                 <div className="cart-buy-btn">
-                                                    <button className='addtocart'>ADD TO CART</button>
+                                                   <AddToCartButton
+                                                   cartCount={cartCount}
+                                                   setCartCount={setCartCount}
+                                                   product={details}
+                                                   />
                                                     <button className='buyNow'>BUY NOW</button>
                                                 </div>
                                             </div>

@@ -6,8 +6,11 @@ import {RxCross2} from 'react-icons/rx'
 
 import { CgMenu } from 'react-icons/cg'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+    const {cartdata}=useSelector((select)=>select.cartSlice)
+    console.log(cartdata);
     const navigate=useNavigate()
     const [menuOpen, setmenuOpen] = useState(false)
     // console.log(menuOpen);
@@ -40,7 +43,7 @@ const Header = () => {
                                 </div>
                                 <div className="cart">
                                     <FiShoppingCart />
-                                    <span className="cartCount">0</span>
+                                    {cartdata.length>0?<span className="cartCount">{cartdata.length}</span>:''}
                                 </div>
 
                             </div>
