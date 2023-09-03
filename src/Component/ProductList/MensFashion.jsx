@@ -42,7 +42,7 @@ const MensFashion = () => {
           <div className="col-lg-2"></div>
           <div className="col-lg-10">
             <div className="productDiv">
-                <div className="row">
+                <div className="row gy-4">
                   {
                     mens && mens.map((item)=>{
                       return (

@@ -31,21 +31,16 @@
 
     .productDetails {
 
+   
         .productsDeatils-Wrapper {
             background-color: #fff;
             padding-top: 48px;
             overflow: hidden;
-
-            .imgBox {
-                // position: sticky;
-                // top: 0px;
-                // z-index: 999;
-                // border: 2px solid green;
+           
+            .imgBoxsec {
                 .row {
                     padding-right: 0 !important;
-
                 }
-
                 .small-img {
                     // border: 2px solid blue;
                     display: flex;
@@ -242,6 +237,7 @@
                             display: flex;
                             flex-direction: column;
                             row-gap: 7px;
+                            
 
                             img {
                                 border: 1px solid #E1E1E1;

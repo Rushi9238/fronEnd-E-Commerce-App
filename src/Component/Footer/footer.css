@@ -1,0 +1,177 @@
+footer {
+  padding-top: 93px;
+  background: #242933;
+}
+@media screen and (max-width: 770px) {
+  footer {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 570px) {
+  footer {
+    padding-top: 21px;
+  }
+}
+footer .topF .fooElem .head {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+footer .topF .fooElem .ful {
+  padding-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  list-style: none;
+}
+@media screen and (max-width: 570px) {
+  footer .topF .fooElem .ful {
+    margin-top: 20px;
+  }
+}
+footer .topF .fooElem .ful li {
+  margin-top: 30px;
+}
+@media screen and (max-width: 570px) {
+  footer .topF .fooElem .ful li {
+    margin-top: 15px;
+  }
+}
+footer .topF .fooElem .ful li a {
+  color: #AAA;
+  text-decoration: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: block;
+  transition: all 0.4s;
+}
+footer .topF .fooElem .ful li a:hover {
+  color: white;
+  padding-left: 10px;
+}
+@media screen and (max-width: 570px) {
+  footer .topF .fooElem .ful li a:hover {
+    padding-left: 0px;
+  }
+}
+footer .topF .frightSec .logo {
+  font-family: "Preahvihear", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+}
+footer .topF .frightSec .logo::after {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 4px;
+  background-color: #415FFF;
+  bottom: -5px;
+  left: 0;
+}
+footer .topF .frightSec .head {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+footer .topF .frightSec .subHead {
+  color: #AAA;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 33px;
+}
+@media screen and (max-width: 570px) {
+  footer .topF .frightSec .subHead {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+footer .topF .frightSec .add {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+@media screen and (max-width: 570px) {
+  footer .topF .frightSec .add {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+footer .topF .frightSec .link {
+  margin-top: 15px;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  display: block;
+}
+footer .topF .frightSec .time {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 15px;
+  color: white;
+}
+footer .topF .frightSec .phone {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 15px;
+}
+footer .topF .frightSec .socials {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+footer .topF .frightSec .socials a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  transition: all 0.4s;
+}
+footer .topF .frightSec .socials a:hover {
+  color: #415FFF;
+}
+footer .copy {
+  border-top: 1px solid #505050;
+  margin-top: 20px;
+  padding: 20px 0px;
+}
+@media screen and (max-width: 570px) {
+  footer .copy {
+    padding: 10px 0px;
+  }
+}
+footer .copy .txt {
+  color: #AAA;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+@media screen and (max-width: 570px) {
+  footer .copy .txt {
+    text-align: center;
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=footer.css.map */

@@ -3,6 +3,10 @@ import { useParams } from 'react-router-dom'
 import { BiSolidChevronRight } from 'react-icons/bi'
 // import ReactImageMagnify from 'react-image-magnify';
 // import ReactSlick from 'react-slick';
+import benifits1 from '../../Assets/Imgaes/icons/benifits1.svg'
+import benifits2 from '../../Assets/Imgaes/icons/benifits2.svg'
+import benifits3 from '../../Assets/Imgaes/icons/benifits3.svg'
+import benifits4 from '../../Assets/Imgaes/icons/benifits4.svg'
 import './productdetails.css'
 import CartCount from './CartCount'
 import AddToCartButton from './AddToCartButton'
@@ -76,7 +80,7 @@ const ProductDetails = () => {
                         <div className="productsDeatils-Wrapper">
                             <div className="row">
                                 <div className="col-lg-5 ">
-                                    <div className="imgBox">
+                                    <div className="imgBoxsec">
                                         <div className="row  gx-2 gy-4">
                                             <div className="col-2 ">
                                                 <div className="small-img">
@@ -195,6 +199,40 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
+            <div className='ourBenifits' >
+        <div className="container">
+            <div className="heading">
+            Our Benifits
+            </div>
+            <div className="elems">
+                <div className="elem">
+                    <img src={benifits1} className='eImg' alt="icon image" />
+                    <div className="text">
+                    No Cost EMI
+                    </div>
+                </div>
+                <div className="elem">
+                    <img src={benifits2} className='eImg' alt="icon image" />
+                    <div className="text">
+                    Free Shipping on all orders
+                    </div>
+                </div>
+                <div className="elem">
+                    <img src={benifits3} className='eImg' alt="icon image" />
+                    <div className="text">
+                    100% Secure Payments
+                    </div>
+                </div>
+                <div className="elem">
+                    <img src={benifits4} className='eImg' alt="icon image" />
+                    <div className="text">
+                    24*7 Service Support
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
         </>
     )
 }

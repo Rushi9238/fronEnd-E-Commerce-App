@@ -52,6 +52,7 @@
   background-color: #fff;
   border-radius: 20px;
   border: 1px solid;
+  height: 100%;
 }
 .product-container .productDiv .product-card .imgDiv img {
   aspect-ratio: 1;

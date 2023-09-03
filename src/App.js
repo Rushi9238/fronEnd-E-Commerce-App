@@ -11,6 +11,8 @@ import MensFashion from './Component/ProductList/MensFashion';
 import WomensFashion from './Component/ProductList/WomensFashion';
 import OurStoteProduct from './Component/ProductList/OurStoteProduct';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
+import Footer from './Component/Footer/Footer';
+import Cart from './Component/Cart/Cart';
 
 
 function App() {
@@ -69,7 +71,9 @@ dispatch(collectData(respo.products))
           <Route path='/mensfashion' element={<MensFashion/>}/>
           <Route path='/womenfashion' element={<WomensFashion/>}/>
           <Route path='/detils/:id' element={<ProductDetails/>}/>
+          <Route path='/cart' element={<Cart/>}/>
          </Routes>
+         <Footer/>
 
     </div>
   );

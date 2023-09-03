@@ -42,7 +42,7 @@ useEffect(()=>{
           <div className="col-2"></div>
           <div className="col-10">
             <div className="productDiv">
-                <div className="row">
+                <div className="row gy-4">
                   {
                     ProductData && ProductData.map((item)=>{
                       return (

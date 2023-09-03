@@ -1,0 +1,195 @@
+// footer
+footer {
+    padding-top: 93px;
+    background: #242933;
+
+    @media screen and (max-width:770px) {
+        padding-top: 50px;
+
+    }
+
+    @media screen and (max-width:570px) {
+        padding-top: 21px;
+
+
+    }
+
+    .topF {
+        .fooElem {
+            .head {
+                color: #FFF;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            .ful {
+                padding-left: 0px;
+                margin-bottom: 0px;
+                margin-top: 30px;
+                list-style: none;
+
+                @media screen and (max-width:570px) {
+                    margin-top: 20px;
+                }
+
+                li {
+                    margin-top: 30px;
+
+                    @media screen and (max-width:570px) {
+                        margin-top: 15px;
+                    }
+
+                    a {
+                        color: #AAA;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        display: block;
+                        transition: all .4s;
+
+                        &:hover {
+                            color: white;
+                            padding-left: 10px;
+
+                            @media screen and (max-width:570px) {
+                                padding-left: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .frightSec {
+            .logo {
+                font-family: 'Preahvihear', sans-serif;
+                font-size: 36px;
+                line-height: 42px;
+                font-weight: 400;
+                color: #fff;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 45%;
+                    height: 4px;
+                    background-color: #415FFF;
+                    bottom: -5px;
+                    left: 0;
+                }
+            }
+
+            .head {
+                color: #FFF;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .subHead {
+                color: #AAA;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                margin-top: 33px;
+
+                @media screen and (max-width:570px) {
+                    margin-top: 20px;
+                    font-size: 16px;
+                }
+            }
+
+            .add {
+                margin-top: 15px;
+                margin-bottom: 0px;
+                color: #FFF;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+
+                @media screen and (max-width:570px) {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+
+            .link {
+                margin-top: 15px;
+                color: #FFF;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                display: block;
+            }
+
+            .time {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                margin-top: 15px;
+                color: white;
+            }
+
+            .phone {
+                color: #FFF;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                margin-top: 15px;
+            }
+
+            .socials {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                column-gap: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 22px;
+                    transition: all .4s;
+
+                    &:hover {
+                        color: #415FFF;
+                    }
+                }
+            }
+        }
+    }
+
+    .copy {
+        border-top: 1px solid #505050;
+        margin-top: 20px;
+        padding: 20px 0px;
+
+        @media screen and (max-width:570px) {
+            padding: 10px 0px;
+        }
+
+        .txt {
+            color: #AAA;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            @media screen and (max-width:570px) {
+                text-align: center;
+                font-size: 8px;
+
+            }
+        }
+    }
+}

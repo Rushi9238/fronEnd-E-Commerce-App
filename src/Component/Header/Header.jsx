@@ -24,7 +24,7 @@ const Header = () => {
                                 <div className="mobile-menu" onClick={() => setmenuOpen(!menuOpen)}>
                                     <CgMenu className='menu-btn' />
                                 </div>
-                                <div className="logo">
+                                <div className="logo" onClick={()=>navigate('/')}>
                                     shoplify
                                 </div>
                                 <div className="inputBox">
@@ -41,7 +41,7 @@ const Header = () => {
                                     <AiOutlineHeart />
                                     <span className='wishCount'>0</span>
                                 </div>
-                                <div className="cart">
+                                <div className="cart" onClick={()=>navigate('/cart')}>
                                     <FiShoppingCart />
                                     {cartdata.length>0?<span className="cartCount">{cartdata.length}</span>:''}
                                 </div>
