@@ -20,6 +20,10 @@ const cartListSlice=createSlice({
         },
         removeCart:(state,action)=>{
             // 
+            const removeItemCart=state.cartdata.filter((item)=>{
+                return item.id !== action.payload.id
+            })
+            state.cartdata=removeItemCart
         }
     }
 })

@@ -10,7 +10,7 @@ const dispatch=useDispatch()
 
 const handelAddCart=()=>{
     if(cartdata.length===0){
-        dispatch(addCartData({...product,'count':cartCount}))
+        dispatch(addCartData({...product,'count':cartCount,'dis_mrp':((product.price * 82) - (product.price * 82 * product.discountPercentage / 100).toFixed(0)),'actual_mrp':(product.price * 82)}))
     }
     if(cartdata.length !==0){
         const repeatProduct=cartdata.filter((item)=>{
