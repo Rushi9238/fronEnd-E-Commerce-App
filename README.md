@@ -14,33 +14,33 @@ With its comprehensive feature set and modern technologies, this E-commerce app 
 
 ### `Features`
 
-1 Product browsing
-2 Shopping cart
-3 User authentication
-4 Pagination
-5 SwiperJS for product sliders
-6 Redux state management.
+1. Product browsing
+2. Shopping cart
+3. User authentication
+4. Pagination
+5. SwiperJS for product sliders
+6. Redux state management.
 
 ### `Technologies Used`
 
-1 React
-2 React Router
-3 Bootstrap
-4 Redux
-5 SwiperJS
-6 Other technologies and libraries you've used
+1. React
+2. React Router
+3. Bootstrap
+4. Redux
+5. SwiperJS
+6. Other technologies and libraries you've used
 
 ### `Summery`
-1 E-commerce web application
-2 Developed with React, React Router, Pagination, Bootstrap, Redux, and SwiperJs
-3 Offers a user-friendly and responsive interface
-4 Features include product browsing, cart management, and secure checkout
-5 Utilizes Redux for efficient state management
-6 Implements SwiperJs for dynamic product sliders
-7 Facilitates smooth navigation with React Router
-8 Supports user authentication and account management
-9 Encourages contributions through clear contributing guidelines
-10 Open-source project with a specified license
+1. E-commerce web application
+2. Developed with React, React Router, Pagination, Bootstrap, Redux, and SwiperJs
+3. Offers a user-friendly and responsive interface
+4. Features include product browsing, cart management, and secure checkout
+5. Utilizes Redux for efficient state management
+6. Implements SwiperJs for dynamic product sliders
+7. Facilitates smooth navigation with React Router
+8. Supports user authentication and account management
+9. Encourages contributions through clear contributing guidelines
+10. Open-source project with a specified license
 
 
 
