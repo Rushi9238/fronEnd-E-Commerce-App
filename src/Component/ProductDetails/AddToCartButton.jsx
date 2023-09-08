@@ -17,7 +17,7 @@ const handelAddCart=()=>{
             return item.id== product.id
         })
         if(repeatProduct.length===0){
-            dispatch(addCartData({...product,'count':cartCount}))
+            dispatch(addCartData({...product,'count':cartCount,'dis_mrp':((product.price * 82) - (product.price * 82 * product.discountPercentage / 100).toFixed(0)),'actual_mrp':(product.price * 82)}))
         }
         else{
             dispatch(updateCartCount({'count':repeatProduct[0].count+cartCount,'id':repeatProduct[0].id}))

@@ -178,7 +178,7 @@ const Footer = () => {
                 </div>
                 <div className="copy">
                     <div className="txt">
-                        © 2023 HISOA Electronic Pvt Ltd (A division of vivo). All rights reserved.
+                        © 2023 Shoplify Pvt Ltd All rights reserved.
                     </div>
                 </div>
             </div>
