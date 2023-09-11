@@ -1,18 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import {BiSolidChevronRight} from 'react-icons/bi'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import './productList.css'
+import ReactPaginate from 'react-paginate';
+
 const WomensFashion = () => {
     const {womens}=useSelector((select)=> select.ReducerSlice)
-    const navigate=useNavigate()
-    useEffect(()=>{
-      window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "instant",
-        });
-    },[])
+    const [totalPage,setTotalPage]=useState(1)
+    const [currentPage,setCurrentPage]=useState(10)
+const navigate=useNavigate()
+useEffect(()=>{
+  window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+},[])
+
+  useEffect(()=>{
+    if(womens){
+      setTotalPage(womens.length/10)
+    }
+  },[currentPage])
   return (
     <>
      <div className="product-container">
@@ -43,7 +53,7 @@ const WomensFashion = () => {
             <div className="productDiv">
                 <div className="row gy-4">
                   {
-                    womens && womens.map((item)=>{
+                    womens && womens.slice(currentPage-10,currentPage).map((item)=>{
                       return (
                         <div className="col-lg-4 col-md-6" key={item.id} onClick={()=>navigate(`/detils/${item.id}`)}>
                         <div className="product-card">
@@ -77,6 +87,22 @@ const WomensFashion = () => {
                       )
                     })
                   }
+                  <div className="pagination">
+                  <ReactPaginate
+                    breakLabel="..."
+                    nextLabel="next"
+                    onPageChange={(e) => {
+                      console.log('e.selected',e.selected);
+                      console.log('pageCount',e.selected*10+10);
+                      setCurrentPage(e.selected*10+10)
+                    }}
+                    pageRangeDisplayed={3}
+                    pageCount={totalPage}
+                    previousLabel="prev"
+                    // forcePage={currentPage - 1}
+                    renderOnZeroPageCount={null}
+                  />
+                  </div>
                 </div>
 
                 {/* <div className="paginationDiv">

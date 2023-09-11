@@ -41,6 +41,7 @@ With its comprehensive feature set and modern technologies, this E-commerce app 
 8. Supports user authentication and account management
 9. Encourages contributions through clear contributing guidelines
 10. Open-source project with a specified license
+11. Implements React pagination library
 
 
 

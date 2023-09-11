@@ -1,0 +1,42 @@
+.pagination{
+   padding-top: 50px;
+
+    // border: 2px solid red;
+    ul{
+        list-style: none;
+        display: flex;
+        column-gap: 20px;
+        li{
+            border: 1px solid;
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                color: #000;
+                line-height: 40px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .next , .previous{
+            border: none !important;
+            // border: 2px solid red !important;
+            text-transform: uppercase;
+            
+        }
+        .next.disabled{
+            opacity: .5;
+        }
+        .previous.disabled{
+            opacity: .5;
+            // cursor:wait;
+        }
+        li.selected{
+            background-color: cornflowerblue;
+        }
+    }
+
+}
