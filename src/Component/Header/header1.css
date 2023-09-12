@@ -1,0 +1,45 @@
+.rightSide .account .dropdown .btn .accountIcon {
+  color: #FFF000;
+  font-size: 26px;
+}
+.rightSide .account .dropdown .btn:hover {
+  background-color: transparent;
+  border: none;
+}
+.rightSide .account .dropdown .dropdown-toggle::after {
+  display: none;
+}
+.rightSide .account .dropdown .btn-primary {
+  background-color: transparent;
+  border: none;
+}
+
+.modalWrapper {
+  background: var(--gradiant-bg, linear-gradient(180deg, #E6F9FF 0%, #F3EDFF 100%));
+  border-radius: 0;
+  border: none;
+}
+.modalWrapper .modalLogIn .logHead {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.modalWrapper .modalLogIn .googleAuth-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
+}
+.modalWrapper .modalLogIn .googleAuth-div .newuser {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.modalWrapper .modalLogIn .googleAuth-div .newuser span {
+  color: #415FFF;
+}/*# sourceMappingURL=header1.css.map */

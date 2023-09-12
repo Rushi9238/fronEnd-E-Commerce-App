@@ -1,0 +1,71 @@
+.rightSide{
+    // border: 2px solid red;
+    .account{
+        .dropdown {
+            .btn {
+                .accountIcon {
+                    color: #FFF000;
+                    font-size: 26px;
+                }
+
+                &:hover {
+                    background-color: transparent;
+                    border: none;
+
+                }
+            }
+
+            .dropdown-toggle {
+                &::after {
+                    display: none;
+
+                }
+            }
+
+            .btn-primary {
+                background-color: transparent;
+                border: none;
+            }
+
+        }
+    }
+}
+
+//  Google Auth Modal
+
+.modalWrapper {
+    background: var(--gradiant-bg, linear-gradient(180deg, #E6F9FF 0%, #F3EDFF 100%));
+    border-radius: 0;
+    border: none;
+
+    .modalLogIn {
+        // border: 1px solid red;
+
+        .logHead {
+            color: #000;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .googleAuth-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+       
+        .newuser{
+            color: #000;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            span{
+                color: #415FFF;
+            }
+        }
+        }
+    }
+   
+}

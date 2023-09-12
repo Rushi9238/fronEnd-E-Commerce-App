@@ -20,6 +20,7 @@ With its comprehensive feature set and modern technologies, this E-commerce app 
 4. Pagination
 5. SwiperJS for product sliders
 6. Redux state management.
+7. Login using Google Auth
 
 ### `Technologies Used`
 
@@ -28,7 +29,8 @@ With its comprehensive feature set and modern technologies, this E-commerce app 
 3. Bootstrap
 4. Redux
 5. SwiperJS
-6. Other technologies and libraries you've used
+6. GoogleAuth
+7. Other technologies and libraries you've used
 
 ### `Summery`
 1. E-commerce web application
@@ -42,6 +44,7 @@ With its comprehensive feature set and modern technologies, this E-commerce app 
 9. Encourages contributions through clear contributing guidelines
 10. Open-source project with a specified license
 11. Implements React pagination library
+12. user Login by using GoogleAuth
 
 
 

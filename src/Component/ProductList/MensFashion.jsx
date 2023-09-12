@@ -16,7 +16,7 @@ useEffect(()=>{
       left: 0,
       behavior: "instant",
     });
-},[])
+},[totalPage, ])
 
   useEffect(()=>{
     if(mens){

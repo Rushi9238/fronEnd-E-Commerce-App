@@ -16,7 +16,7 @@ useEffect(()=>{
       left: 0,
       behavior: "instant",
     });
-},[])
+},[currentPage, ])
 
   useEffect(()=>{
     if(ProductData){
