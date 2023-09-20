@@ -37,12 +37,12 @@ Welcome to the E-Commerce App, a full-featured e-commerce web application built 
 - Redux Toolkit: State management for the application.
 - SwiperJS: Used for product image carousels.
 - Formik and Yup: For form handling and validation.
-- Axios: Making HTTP requests to fetch data from the backend.
+- Async/Await: Making HTTP requests to fetch data from the backend.
 - Razorpay: Payment processing integration.
 - Google OAuth: For user authentication.
 
 
-## Folder Structure
+<!-- ## Folder Structure
 e-commerce-app/
   ├── src/
   │   ├── components/
@@ -55,7 +55,7 @@ e-commerce-app/
   ├── README.md
   ├── .env.sample
   ├── package.json
-  └── ...
+  └── ... -->
 
 ## Project Description
 
