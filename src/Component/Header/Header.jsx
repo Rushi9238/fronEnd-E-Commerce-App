@@ -17,12 +17,22 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 
 const Header = () => {
     const { cartdata } = useSelector((select) => select.cartSlice)
-    console.log(cartdata);
+    // console.log(cartdata);
     const navigate = useNavigate()
     const [menuOpen, setmenuOpen] = useState(false)
+    const [userLogin, setUserLogIn] = useState(false)
     // login MOdal
     const [logInModal, setLogInModal] = useState(false)
     // console.log(menuOpen);
+
+
+    const googleAuthfun=(details)=>{
+        // console.log(details);
+        localStorage.setItem('clientToken',details.sub)
+        setLogInModal(!logInModal)
+        setUserLogIn(true)
+    }
+    
     return (
         <>
             <section className='header-section sticky-top'>
@@ -48,9 +58,28 @@ const Header = () => {
                                         <Dropdown.Toggle id="dropdown-basic">
                                             <AiOutlineUser className='accountIcon' />
                                         </Dropdown.Toggle>
-                                        <Dropdown.Menu>
+                                        {/* <Dropdown.Menu>
                                             <Dropdown.Item onClick={() => {setLogInModal(true) }} >LogIn</Dropdown.Item>
                                             <Dropdown.Item onClick={() => { }}>Create Account</Dropdown.Item>
+                                        </Dropdown.Menu> */}
+                                          <Dropdown.Menu>
+                                            {
+                                                !userLogin ? <>
+                                                    <Dropdown.Item onClick={() => setLogInModal(true)} >LogIn</Dropdown.Item>
+                                                    <Dropdown.Item onClick={() => {}}>Create Account</Dropdown.Item>
+                                                </>
+                                                    :
+                                                    <>
+                                                        <Dropdown.Item onClick={() => {
+                                                            
+                                                            setUserLogIn(false)
+                                                            localStorage.removeItem('clientToken')
+                                                            // toast.success('Log out successfully')
+                                                        }} >Logout</Dropdown.Item>
+                                                        <Dropdown.Item onClick={() => {}}>DashBoard</Dropdown.Item>
+                                                    </>
+                                            }
+
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </div>
@@ -153,7 +182,7 @@ const Header = () => {
                                                             onSuccess={credentialResponse => {
                                                                 const clientDetails = jwt_decode(credentialResponse.credential)
                                                                 // console.log(clientDetails);
-                                                                // googleAuthApi(clientDetails)
+                                                                googleAuthfun(clientDetails)
                                                             }}
                                                             onError={() => {
                                                                 // console.log('Login Failed');
