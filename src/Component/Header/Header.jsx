@@ -176,8 +176,8 @@ const Header = () => {
                                             <div className="googleAuth-div">
                                                 <div className="loginUsing"></div>
                                                 <div className="googleAuth">
-                                                    {/* 452031215564-ckprvkmdiub5iovm184k8sb76qfj5gh2.apps.googleusercontent.com */}
-                                                    <GoogleOAuthProvider clientId="452031215564-ckprvkmdiub5iovm184k8sb76qfj5gh2.apps.googleusercontent.com">
+                                                    {/* 41123671961-hs01iqo43igs2qa54tk6pk65uf0efama.apps.googleusercontent.com */}
+                                                    <GoogleOAuthProvider clientId="41123671961-hs01iqo43igs2qa54tk6pk65uf0efama.apps.googleusercontent.com">
                                                         <GoogleLogin
                                                             onSuccess={credentialResponse => {
                                                                 const clientDetails = jwt_decode(credentialResponse.credential)
