@@ -13,7 +13,8 @@ import OurStoteProduct from './Component/ProductList/OurStoteProduct';
 import ProductDetails from './Component/ProductDetails/ProductDetails';
 import Footer from './Component/Footer/Footer';
 import Cart from './Component/Cart/Cart';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 const dispatch=useDispatch()
@@ -61,6 +62,10 @@ dispatch(collectData(respo.products))
               https://dummyjson.com/products/categories
               https://dummyjson.com/products/category/smartphones
           */}
+          <ToastContainer
+        position="top-right"
+        autoClose={1000}
+      />
          <Header/>
         
          {/* <Home/> */}

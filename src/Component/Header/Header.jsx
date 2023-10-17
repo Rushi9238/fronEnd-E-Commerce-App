@@ -7,30 +7,38 @@ import { RxCross2 } from 'react-icons/rx'
 
 import { CgMenu } from 'react-icons/cg'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import Dropdown from 'react-bootstrap/Dropdown';
 import Modal from 'react-bootstrap/Modal';
 
 import jwt_decode from "jwt-decode";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import { checkLogInModal } from '../../Redux/LogInModal'
+import { checkUserLogIn } from '../../Redux/UserLogIn'
+import { toast } from 'react-toastify'
 
 const Header = () => {
     const { cartdata } = useSelector((select) => select.cartSlice)
-    // console.log(cartdata);
+    const {loginModal}=useSelector((select)=>select.LogInModal)
+    const {userLogIn}=useSelector((select)=>select.UserLogIn)
+    // console.log(userLogIn);
     const navigate = useNavigate()
+    const dispatch=useDispatch()
     const [menuOpen, setmenuOpen] = useState(false)
-    const [userLogin, setUserLogIn] = useState(false)
-    // login MOdal
-    const [logInModal, setLogInModal] = useState(false)
-    // console.log(menuOpen);
-
-
+ 
     const googleAuthfun=(details)=>{
         // console.log(details);
-        localStorage.setItem('clientToken',details.sub)
-        setLogInModal(!logInModal)
-        setUserLogIn(true)
+        const userData={
+            'email':details.email,
+            'name':details.name,
+            'sub':details.sub
+        }
+
+        localStorage.setItem('clientData',JSON.stringify(userData))
+        toast.success('Logined Succssfully')
+        dispatch(checkLogInModal(false))
+        dispatch(checkUserLogIn(true))
     }
     
     return (
@@ -58,23 +66,24 @@ const Header = () => {
                                         <Dropdown.Toggle id="dropdown-basic">
                                             <AiOutlineUser className='accountIcon' />
                                         </Dropdown.Toggle>
-                                        {/* <Dropdown.Menu>
-                                            <Dropdown.Item onClick={() => {setLogInModal(true) }} >LogIn</Dropdown.Item>
-                                            <Dropdown.Item onClick={() => { }}>Create Account</Dropdown.Item>
-                                        </Dropdown.Menu> */}
+                                     
                                           <Dropdown.Menu>
                                             {
-                                                !userLogin ? <>
-                                                    <Dropdown.Item onClick={() => setLogInModal(true)} >LogIn</Dropdown.Item>
+                                                !userLogIn ? <>
+                                                    <Dropdown.Item onClick={() => {
+                                                     
+                                                        dispatch(checkLogInModal(true))
+                                                    }} >LogIn</Dropdown.Item>
                                                     <Dropdown.Item onClick={() => {}}>Create Account</Dropdown.Item>
                                                 </>
                                                     :
                                                     <>
                                                         <Dropdown.Item onClick={() => {
                                                             
-                                                            setUserLogIn(false)
-                                                            localStorage.removeItem('clientToken')
-                                                            // toast.success('Log out successfully')
+                                                            // setUserLogIn(false)
+                                                            dispatch(checkUserLogIn(false))
+                                                            localStorage.removeItem('clientData')
+                                                            toast.success('Log out successfully')
                                                         }} >Logout</Dropdown.Item>
                                                         <Dropdown.Item onClick={() => {}}>DashBoard</Dropdown.Item>
                                                     </>
@@ -83,9 +92,11 @@ const Header = () => {
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </div>
-                                <div className="wishList">
+                                <div className="wishList" onClick={()=>{
+                                   
+                                }}>
                                     <AiOutlineHeart />
-                                    <span className='wishCount'>0</span>
+                                    {/* <span className='wishCount'>0</span> */}
                                 </div>
                                 <div className="cart" onClick={() => navigate('/cart')}>
                                     <FiShoppingCart />
@@ -153,8 +164,11 @@ const Header = () => {
 
                      {/* Modal */}
                      <Modal
-                        show={logInModal}
-                        onHide={() => setLogInModal(!logInModal)}
+                        show={loginModal}
+                        onHide={() => {
+                            // setLogInModal(!logInModal)
+                            dispatch(checkLogInModal(false))
+                        }}
                         backdrop="static"
                         keyboard={false}
                         size="lg"
@@ -177,7 +191,7 @@ const Header = () => {
                                                 <div className="loginUsing"></div>
                                                 <div className="googleAuth">
                                                     {/* 41123671961-hs01iqo43igs2qa54tk6pk65uf0efama.apps.googleusercontent.com */}
-                                                    <GoogleOAuthProvider clientId="41123671961-hs01iqo43igs2qa54tk6pk65uf0efama.apps.googleusercontent.com">
+                                                    <GoogleOAuthProvider clientId="41123671961-ooe2pj74fsf9ps2g4939aca1etonm388.apps.googleusercontent.com">
                                                         <GoogleLogin
                                                             onSuccess={credentialResponse => {
                                                                 const clientDetails = jwt_decode(credentialResponse.credential)
